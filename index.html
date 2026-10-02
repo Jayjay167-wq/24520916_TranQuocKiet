@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jane Doe | Lead Engineer</title>
+  <link rel="stylesheet" href="style.css">
   <script src="theme.js" defer></script>
 </head>
 <body>
@@ -19,9 +20,43 @@
     </ul>
   </nav>
   <main id="main-content" role="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <h2 id="hero-heading">Building accessible, reliable digital products</h2>
+      <p>I am Jane Doe, a lead engineer who turns complex product needs into clear, maintainable web experiences.</p>
+      <img src="assets/profile.jpg" alt="Portrait of Jane Doe, Lead Engineer" width="400" height="400">
+    </section>
     <section id="about">
       <h2>About</h2>
       <p>Jane Doe is a lead engineer focused on building accessible, dependable web experiences.</p>
+    </section>
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills-grid" role="list">
+        <li class="skill-category">
+          <h3>Frontend Development</h3>
+          <ul class="skill-list" role="list">
+            <li><span class="skill-badge">Semantic HTML</span></li>
+            <li><span class="skill-badge">CSS Grid</span></li>
+            <li><span class="skill-badge">Accessibility</span></li>
+          </ul>
+        </li>
+        <li class="skill-category">
+          <h3>Engineering Practices</h3>
+          <ul class="skill-list" role="list">
+            <li><span class="skill-badge">Design Systems</span></li>
+            <li><span class="skill-badge">Performance</span></li>
+            <li><span class="skill-badge">Git</span></li>
+          </ul>
+        </li>
+        <li class="skill-category">
+          <h3>Collaboration</h3>
+          <ul class="skill-list" role="list">
+            <li><span class="skill-badge">Technical Leadership</span></li>
+            <li><span class="skill-badge">Code Review</span></li>
+            <li><span class="skill-badge">Mentoring</span></li>
+          </ul>
+        </li>
+      </ul>
     </section>
     <section id="projects">
       <h2>Projects</h2>
