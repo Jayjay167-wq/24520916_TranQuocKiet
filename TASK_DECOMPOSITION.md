@@ -130,3 +130,20 @@
 - [ ] A responsive 2D grid is committed independently and works at 375px without horizontal scrolling.
 - [ ] The accessible theme engine is committed independently and persists state only with `localStorage` key `theme`.
 - [ ] The page meets contrast, LCP, CLS, keyboard-navigation, and console-error acceptance criteria.
+
+## 6.0 Exercise 3: Component Architecture and State Modeling
+
+### 6.1 Define Component Contracts
+
+- [ ] Review and approve each component contract before implementation begins.
+
+| Component | Semantic and data contract | Required states and behavior | Accessibility contract |
+| --- | --- | --- | --- |
+| Hero | A named introductory region containing one page-level heading, professional pitch, and portrait image. The image must have descriptive `alt`, explicit `width`, and explicit `height`. | Static content; the portrait reserves its display space before loading. | The heading establishes the page topic, and the portrait description conveys meaningful image content without duplicating nearby text. |
+| Theme switcher | A native `button` identified by `#theme-toggle`; the active theme is stored only in `localStorage` key `theme` and reflected on the document with `data-theme`. | Supports `light` and `dark`; initialization restores a valid saved state or uses the system preference; activation toggles state and persistence. | The button has an understandable visible action label and `aria-pressed`, which is `true` only for dark mode; it supports Tab, Enter, and Space. |
+| Skills matrix | A named skills section containing categories and labeled skill badges; layout hooks may use `skills-grid`, `skill-category`, and `skill-badge` classes. | Static skill data grouped by category; content wraps without loss or overlap. | The section and categories use headings, and badge text remains readable in source order. |
+| Project card | One self-contained `article` per project with `project-card` class and a `data-category` value. Each card contains a heading, description, technology tags, and one destination link. | Static display state initially; category data remains separate from presentation so filtering can be added later. | The card heading is an `h3` under the projects heading; each destination link has a descriptive accessible name. |
+| Contact form | A native `form` with explicit visible labels, stable field IDs, suitable input types, and a submission control. | `idle`, `submitting`, `success`, and `error`; duplicate submission is blocked while submitting, and feedback is exposed after success or failure. | Every control is labeled; validation and submission feedback is programmatically associated with the affected field or form and announced without requiring a mouse. |
+
+- [ ] Keep data, behavior, and presentation decoupled: semantic markup holds content and data attributes, CSS controls appearance, and JavaScript owns state changes and event handling.
+- [ ] Keep each component self-contained so a contract change is limited to that component and its documented interfaces.
