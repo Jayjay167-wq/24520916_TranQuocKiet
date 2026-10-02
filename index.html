@@ -111,36 +111,45 @@
         </li>
       </ul>
     </section>
-    <section id="project-updates" aria-labelledby="project-updates-heading" aria-busy="true">
+    <section id="project-updates" aria-labelledby="project-updates-heading" data-state="live">
       <h2 id="project-updates-heading">Project Updates</h2>
-      <p class="loading-status" role="status">Loading project updates.</p>
-      <ul class="skeleton-list" aria-hidden="true">
-        <li class="skeleton-card">
-          <span class="skeleton-line skeleton-line--title"></span>
-          <span class="skeleton-line skeleton-line--text"></span>
-          <span class="skeleton-line skeleton-line--text"></span>
-          <ul class="skeleton-badges">
-            <li><span class="skeleton-badge"></span></li>
-            <li><span class="skeleton-badge"></span></li>
-          </ul>
+      <p>Latest activity from ongoing engineering work.</p>
+      <ul class="live-data-list" role="list">
+        <li>
+          <article class="live-data-item">
+            <header>
+              <h3>Accessibility Review Completed</h3>
+            </header>
+            <p>Keyboard navigation and landmark structure were validated for the portfolio experience.</p>
+            <ul class="live-metadata" aria-label="Update metadata">
+              <li><span>Accessibility</span></li>
+              <li><span>Completed</span></li>
+            </ul>
+          </article>
         </li>
-        <li class="skeleton-card">
-          <span class="skeleton-line skeleton-line--title"></span>
-          <span class="skeleton-line skeleton-line--text"></span>
-          <span class="skeleton-line skeleton-line--text"></span>
-          <ul class="skeleton-badges">
-            <li><span class="skeleton-badge"></span></li>
-            <li><span class="skeleton-badge"></span></li>
-          </ul>
+        <li>
+          <article class="live-data-item">
+            <header>
+              <h3>Responsive Layout Refined</h3>
+            </header>
+            <p>Grid behavior was checked across compact mobile and wide desktop viewports.</p>
+            <ul class="live-metadata" aria-label="Update metadata">
+              <li><span>CSS Grid</span></li>
+              <li><span>In progress</span></li>
+            </ul>
+          </article>
         </li>
-        <li class="skeleton-card">
-          <span class="skeleton-line skeleton-line--title"></span>
-          <span class="skeleton-line skeleton-line--text"></span>
-          <span class="skeleton-line skeleton-line--text"></span>
-          <ul class="skeleton-badges">
-            <li><span class="skeleton-badge"></span></li>
-            <li><span class="skeleton-badge"></span></li>
-          </ul>
+        <li>
+          <article class="live-data-item">
+            <header>
+              <h3>Theme Preference Persisted</h3>
+            </header>
+            <p>Light and dark preferences now remain available between visits through local storage.</p>
+            <ul class="live-metadata" aria-label="Update metadata">
+              <li><span>JavaScript</span></li>
+              <li><span>Completed</span></li>
+            </ul>
+          </article>
         </li>
       </ul>
     </section>
