@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="theme.js" defer></script>
   <script src="contact.js" defer></script>
+  <script src="component-state.js" defer></script>
 </head>
 <body>
   <a href="#main-content">Skip to Content</a>
@@ -113,45 +114,56 @@
     </section>
     <section id="project-updates" aria-labelledby="project-updates-heading" data-state="live">
       <h2 id="project-updates-heading">Project Updates</h2>
-      <p>Latest activity from ongoing engineering work.</p>
-      <ul class="live-data-list" role="list">
-        <li>
-          <article class="live-data-item">
-            <header>
-              <h3>Accessibility Review Completed</h3>
-            </header>
-            <p>Keyboard navigation and landmark structure were validated for the portfolio experience.</p>
-            <ul class="live-metadata" aria-label="Update metadata">
-              <li><span>Accessibility</span></li>
-              <li><span>Completed</span></li>
-            </ul>
-          </article>
-        </li>
-        <li>
-          <article class="live-data-item">
-            <header>
-              <h3>Responsive Layout Refined</h3>
-            </header>
-            <p>Grid behavior was checked across compact mobile and wide desktop viewports.</p>
-            <ul class="live-metadata" aria-label="Update metadata">
-              <li><span>CSS Grid</span></li>
-              <li><span>In progress</span></li>
-            </ul>
-          </article>
-        </li>
-        <li>
-          <article class="live-data-item">
-            <header>
-              <h3>Theme Preference Persisted</h3>
-            </header>
-            <p>Light and dark preferences now remain available between visits through local storage.</p>
-            <ul class="live-metadata" aria-label="Update metadata">
-              <li><span>JavaScript</span></li>
-              <li><span>Completed</span></li>
-            </ul>
-          </article>
-        </li>
-      </ul>
+      <p id="project-updates-status" role="status" aria-live="polite">Latest activity from ongoing engineering work.</p>
+      <section class="state-view" data-state-view="live" aria-label="Available project updates">
+        <ul class="live-data-list" role="list">
+          <li>
+            <article class="live-data-item">
+              <header>
+                <h3>Accessibility Review Completed</h3>
+              </header>
+              <p>Keyboard navigation and landmark structure were validated for the portfolio experience.</p>
+              <ul class="live-metadata" aria-label="Update metadata">
+                <li><span>Accessibility</span></li>
+                <li><span>Completed</span></li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="live-data-item">
+              <header>
+                <h3>Responsive Layout Refined</h3>
+              </header>
+              <p>Grid behavior was checked across compact mobile and wide desktop viewports.</p>
+              <ul class="live-metadata" aria-label="Update metadata">
+                <li><span>CSS Grid</span></li>
+                <li><span>In progress</span></li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="live-data-item">
+              <header>
+                <h3>Theme Preference Persisted</h3>
+              </header>
+              <p>Light and dark preferences now remain available between visits through local storage.</p>
+              <ul class="live-metadata" aria-label="Update metadata">
+                <li><span>JavaScript</span></li>
+                <li><span>Completed</span></li>
+              </ul>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="state-view state-message" data-state-view="empty" aria-labelledby="empty-updates-heading" hidden>
+        <h3 id="empty-updates-heading">No project updates available</h3>
+        <p>There are no project updates to show right now. Please check back later.</p>
+      </section>
+      <section class="state-view state-message" data-state-view="error" aria-labelledby="error-updates-heading" hidden>
+        <h3 id="error-updates-heading">Project updates could not be loaded</h3>
+        <p>We could not retrieve project updates. Please try again.</p>
+        <button id="retry-project-updates" type="button" aria-label="Retry loading project updates">Retry loading updates</button>
+      </section>
     </section>
     <section id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact</h2>

@@ -192,6 +192,31 @@ section + section {
   padding: var(--space-1) var(--space-2);
 }
 
+.state-message {
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+}
+
+.state-message button {
+  background-color: var(--color-link);
+  border: var(--border-width) solid var(--color-link);
+  border-radius: var(--border-radius);
+  color: var(--color-background);
+  font: inherit;
+  justify-self: start;
+  padding: var(--space-2) var(--space-3);
+}
+
+.state-message button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
 .skeleton-list {
   display: grid;
   gap: var(--space-4);
