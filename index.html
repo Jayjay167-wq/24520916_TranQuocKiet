@@ -6,6 +6,7 @@
   <title>Jane Doe | Lead Engineer</title>
   <link rel="stylesheet" href="style.css">
   <script src="theme.js" defer></script>
+  <script src="contact.js" defer></script>
 </head>
 <body>
   <a href="#main-content">Skip to Content</a>
@@ -109,6 +110,27 @@
           </article>
         </li>
       </ul>
+    </section>
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Share a project idea or collaboration opportunity.</p>
+      <form id="contact-form" aria-describedby="contact-status contact-error" data-state="idle">
+        <p id="contact-status" role="status" aria-live="polite">Complete the form to send a message.</p>
+        <p id="contact-error" role="alert" hidden></p>
+        <p class="form-field">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name">
+        </p>
+        <p class="form-field">
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" required maxlength="254" autocomplete="email">
+        </p>
+        <p class="form-field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required minlength="20" maxlength="1000" rows="6"></textarea>
+        </p>
+        <button type="submit">Send message</button>
+      </form>
     </section>
   </main>
 </body>
