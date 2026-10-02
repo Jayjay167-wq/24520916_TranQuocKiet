@@ -69,8 +69,27 @@ section + section {
   margin-top: var(--space-5);
 }
 
+.project-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  list-style: none;
+  margin-top: var(--space-4);
+}
+
+.project-card {
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: grid;
+  gap: var(--space-3);
+  height: 100%;
+  padding: var(--space-4);
+}
+
 h1,
-h2 {
+h2,
+h3 {
   line-height: 1.2;
 }
 
