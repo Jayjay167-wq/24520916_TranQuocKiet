@@ -82,3 +82,51 @@
 
 - [ ] Verify the commit appears in Git history.
 - [ ] Confirm the working tree is clean or document any unrelated pre-existing changes.
+
+## 5.0 Exercise 2: Enterprise Developer Portfolio
+
+### 5.1 T-02A: Design Tokens and Global Reset
+
+- [ ] Define color, typography, spacing, surface, and border tokens as CSS custom properties in `:root`.
+- [ ] Define token values for both light and dark themes.
+- [ ] Add a global reset that applies `box-sizing: border-box` to every element and pseudo-element and removes default margins and padding.
+- [ ] Establish base typography and page styles using the tokens and a readable system font stack.
+- [ ] Confirm regular CSS rules contain no hardcoded hexadecimal colors; use CSS variables instead.
+- [ ] Commit only this work with `git commit -m "feat(css): tokens & reset"`.
+
+### 5.2 T-02B: Responsive Two-Dimensional Grid Layout
+
+- [ ] Identify the portfolio content that benefits from a two-dimensional layout, including project cards.
+- [ ] Build the layout with CSS Grid and an autonomous responsive pattern such as `repeat(auto-fit, minmax(280px, 1fr))`.
+- [ ] Use `gap` for consistent spacing between grid items.
+- [ ] Style the layout and cards exclusively through the established CSS custom properties.
+- [ ] Test at a 375px viewport and resolve overflow until horizontal scrolling is eliminated.
+- [ ] Verify the grid remains legible and balanced at larger viewport widths.
+- [ ] Commit only this work with `git commit -m "feat(css): responsive grid"`.
+
+### 5.3 T-02C: Accessible Theme Engine
+
+- [ ] Add a visible, keyboard-operable theme control with an `aria-pressed` state.
+- [ ] On initialization, read the saved preference only from `localStorage` key `theme`.
+- [ ] Apply the selected theme through a state that maps to the existing CSS variables.
+- [ ] Persist every user-selected preference only to `localStorage` key `theme`.
+- [ ] Update the control’s ARIA state and visual indicator whenever the theme changes.
+- [ ] Test repeated theme changes for zero console errors.
+- [ ] Commit only this work with `git commit -m "feat(js): dark mode engine"`.
+
+### 5.4 Exercise 2 Acceptance Verification
+
+- [ ] Verify full keyboard navigation using Tab and Enter, including the theme control.
+- [ ] Check all foreground and background color token pairings meet WCAG 2.2 AA contrast of at least 4.5:1.
+- [ ] In DevTools Fast 3G mode, confirm LCP is below 2.0 seconds.
+- [ ] Confirm the page has zero cumulative layout shift (CLS).
+- [ ] Confirm the layout has no horizontal scroll at 375px.
+- [ ] Change one CSS token and restore the expected appearance within 60 seconds as live-defense practice.
+- [ ] Verify CSS and JavaScript changes remain in separate commits; combining them is not permitted.
+
+**Exercise 2 definition of done:**
+
+- [ ] Tokens and global reset are committed independently.
+- [ ] A responsive 2D grid is committed independently and works at 375px without horizontal scrolling.
+- [ ] The accessible theme engine is committed independently and persists state only with `localStorage` key `theme`.
+- [ ] The page meets contrast, LCP, CLS, keyboard-navigation, and console-error acceptance criteria.
